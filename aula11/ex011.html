@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Migração</title>
+
+    <style>
+        h1{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: rgb(0, 0, 8);
+            border: 2px solid;
+            border-radius: 10px;
+            text-align: center;
+
+        }
+        body{
+            background-color: rgb(245, 142, 142);
+        }
+        div{
+            color: rgb(255, 255, 255);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: black;
+            border:2px solid;
+            letter-spacing: 3px;
+            display: inline;
+        
+        }
+        input{
+            width: 150px;
+            height: 25px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Porto De Imigração</h1>
+    <input type="text" name="pais" id="pais">
+    <input type="button" value="verificar" onclick="verifica()">
+    <div id="res">Resultado:</div>
+    
+
+    <script>
+        function verifica() {
+            var pais1 = window.document.querySelector('input#pais')
+            var res = window.document.querySelector('div#res')
+            var p1 = String(pais1.value.toUpperCase())
+            res.innerHTML = `O seu país é <strong>${p1}</strong> `
+                if(p1 == 'BRASIL') {
+                    res.innerHTML += ('Você é Brasileiro!')
+                    
+                } else {
+                    res.innerHTML += ('Você é estrangeiro')
+                }
+    
+
+        }
+        
+        
+
+    </script>
+</body>
+</html>
